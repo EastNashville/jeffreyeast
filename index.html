@@ -1,32 +1,31 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jeffrey East</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeffrey East Spotify Experience</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="sky"></div>
-
   <div id="landing" class="scene">
     <img src="assets/background-landing.png" id="background" />
-    <button id="driveButton">Drive</button>
+    <button id="driveButton" aria-label="Enter Truck"></button>
+    <audio id="ignitionSound" src="assets/ignition.mp3"></audio>
   </div>
-
   <div id="interior" class="scene hidden">
     <img src="assets/truck-interior.png" id="interiorImg"/>
-    <div class="radio-controls">
-      <button id="prev">⏮</button>
-      <button id="playPause">▶️</button>
-      <button id="next">⏭</button>
+    <div class="radio">
+      <div id="songTitle">Powering on...</div>
+      <div class="radio-buttons">
+        <button id="prev">⏮</button>
+        <button id="playPause">▶️</button>
+        <button id="next">⏭</button>
+      </div>
     </div>
-    <a href="https://www.patreon.com/jeffreyeast" target="_blank" class="patreon-sticker">I support Jeffrey East on Patreon</a>
+    <a href="https://www.patreon.com/jeffreyeast" class="patreon-sticker" target="_blank">Support Jeffrey on Patreon</a>
   </div>
-
-  <div class="ufo" style="animation-delay: 120s;"></div>
-  <audio id="audioPlayer" src="assets/song1.mp3"></audio>
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
