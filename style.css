@@ -1,0 +1,41 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.ufo {
+  position: absolute;
+  top: 10%;
+  left: -100px;
+  width: 60px;
+  height: 30px;
+  background: radial-gradient(circle at center, #8ef, #04f);
+  border-radius: 30px 30px 10px 10px;
+  box-shadow: 0 0 20px 5px #0ff;
+  animation: flyby 30s linear infinite;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+@keyframes flyby {
+  0% { left: -100px; top: 15%; opacity: 0; }
+  45% { opacity: 1; }
+  50% { top: 10%; }
+  55% { opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
