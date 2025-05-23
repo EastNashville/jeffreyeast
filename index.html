@@ -2,14 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jeffrey East</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div id="sky"></div>
+
+  <div id="landing" class="scene">
+    <img src="assets/background-landing.png" id="background" />
+    <button id="driveButton">Drive</button>
+  </div>
+
+  <div id="interior" class="scene hidden">
+    <img src="assets/truck-interior.png" id="interiorImg"/>
+    <div class="radio-controls">
+      <button id="prev">⏮</button>
+      <button id="playPause">▶️</button>
+      <button id="next">⏭</button>
+    </div>
+    <a href="https://www.patreon.com/jeffreyeast" target="_blank" class="patreon-sticker">I support Jeffrey East on Patreon</a>
+  </div>
+
   <div class="ufo" style="animation-delay: 120s;"></div>
+  <audio id="audioPlayer" src="assets/song1.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
