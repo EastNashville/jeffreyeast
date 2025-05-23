@@ -9,8 +9,11 @@
 </head>
 <body>
   <div id="landing" class="scene">
-    <img src="assets/background-landing.png" id="background" />
-    <div id="truckArea"></div>
+    <img src="assets/background-landing.png" id="background" usemap="#hotspots" />
+    <map name="hotspots">
+      <area shape="circle" coords="900,160,80" href="https://www.patreon.com/jeffreyeast" alt="Patreon" />
+      <area shape="rect" coords="600,500,1000,620" href="#" onclick="enterTruck(event)" alt="Truck" />
+    </map>
     <audio id="ignitionSound" src="assets/ignition.mp3"></audio>
   </div>
 
